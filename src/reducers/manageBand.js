@@ -8,7 +8,9 @@ export default function manageBand(state = {
         id: Math.random()
       }
       return { ...state, bands: [...state.bands, band] }
-
+    case 'DELETE_BAND':
+      const bands = state.bands.filter(band => band.id !== action.id)
+      return { bands }
     default:
       return state;
   }

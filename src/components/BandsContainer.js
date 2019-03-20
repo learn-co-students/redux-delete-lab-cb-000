@@ -13,7 +13,7 @@ class BandsContainer extends Component {
         <BandInput addBand={this.props.addBand}/>
         <ul>
           {bands.map(band => {
-            return <Band band={band} deleteBand={this.props.deleteBand}/>
+            return <Band name={band.name} id={band.id} deleteBand={this.props.deleteBand}/>
           })}
         </ul>
       </div>
